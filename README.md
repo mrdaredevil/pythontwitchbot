@@ -1,5 +1,5 @@
 # pythontwitchbot
- A simple twitch Bot for Twitchplays
+ A simple twitchbot for Twitchplays
 
 Most of the Code in twitchPlaysBot.py is ispired by a tutorial found on:
 https://dev.to/ninjabunny9000/let-s-make-a-twitch-bot-with-python-2nd8
