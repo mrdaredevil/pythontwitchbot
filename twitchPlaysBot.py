@@ -83,11 +83,11 @@ async def shift(ctx):
     await simulateInput.HoldKeyTenMil(0x10)
 
 @bot.command(name='holdShift')
-async def shift(ctx):
+async def holdShift(ctx):
     await simulateInput.PressKey(0x10)
 
 @bot.command(name='releaseShift')
-async def shift(ctx):
+async def releaseShift(ctx):
     await simulateInput.ReleaseKey(0x10)
 
 #Makes the bot run
