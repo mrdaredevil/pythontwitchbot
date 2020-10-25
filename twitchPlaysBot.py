@@ -35,9 +35,13 @@ async def event_message(ctx):
     # responds when somebody writes hello
     if 'hello' in ctx.content.lower():
         await ctx.channel.send(f"Hi, @{ctx.author.name}!")
-        
-    if 'alt' in ctx.content.lower():
-        await simulateInput.AltTab()
+    
+    if 'hallo' in ctx.content.lower():
+        await ctx.channel.send(f"Hi, @{ctx.author.name}!")
+
+    #Use Alt    
+    #if 'alt' in ctx.content.lower():
+    #    await simulateInput.AltTab()
     #Echoes back the same message
     #await ctx.channel.send(ctx.content)
     
@@ -46,6 +50,45 @@ async def event_message(ctx):
 async def test(ctx):
     await ctx.send('test passed!')
 
+@bot.command(name='w')
+async def w(ctx):
+    await simulateInput.HoldKeyTenMil(0x57)
+    
+@bot.command(name='a')
+async def a(ctx):
+    await simulateInput.HoldKeyTenMil(0x41)
+
+@bot.command(name='s')
+async def s(ctx):
+    await simulateInput.HoldKeyTenMil(0x53)
+
+@bot.command(name='d')
+async def d(ctx):
+    await simulateInput.HoldKeyTenMil(0x44)
+
+@bot.command(name='space')
+async def space(ctx):
+    await simulateInput.HoldKeyTenMil(0x20)
+
+@bot.command(name='q')
+async def q(ctx):
+    await simulateInput.HoldKeyTenMil(0x51)
+
+@bot.command(name='e')
+async def e(ctx):
+    await simulateInput.HoldKeyTenMil(0x45)
+
+@bot.command(name='shift')
+async def shift(ctx):
+    await simulateInput.HoldKeyTenMil(0x10)
+
+@bot.command(name='holdShift')
+async def shift(ctx):
+    await simulateInput.PressKey(0x10)
+
+@bot.command(name='releaseShift')
+async def shift(ctx):
+    await simulateInput.ReleaseKey(0x10)
 
 #Makes the bot run
 if __name__ == "__main__":
