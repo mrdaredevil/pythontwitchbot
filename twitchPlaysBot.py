@@ -90,6 +90,14 @@ async def holdShift(ctx):
 async def releaseShift(ctx):
     await simulateInput.ReleaseKey(0x10)
 
+@bot.command(name='run')
+async def run(ctx):
+    await simulateInput.PressKey(0x57)
+
+@bot.command(name='stop')
+async def stop(ctx):
+    await simulateInput.ReleaseKey(0x57)
+
 #Makes the bot run
 if __name__ == "__main__":
     bot.run()
