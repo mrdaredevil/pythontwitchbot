@@ -19,7 +19,7 @@ CHANNEL=[The name of the Channel where the bot should connect]
 
 
 
-To start the Bot create a enviroment:
+To start the Bot, create a enviroment:
 
 1.  Install pipenv:
     pip install pipenv
@@ -30,6 +30,13 @@ To start the Bot create a enviroment:
 
 3.  Install twitchio in your enviroment:
     pipenv install twitchio
+
+    (When you want to use the Spotify-Extension you als have to install:
+        Spotipy: 
+            pipenv install spotipy
+        bottle:
+            pipenv install bottle
+    )
 
 4.  Start the Bot:
     pipenv run python twitchPlaysBot.py
